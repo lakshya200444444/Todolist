@@ -8,10 +8,12 @@
 }
 
 body {
-  background: #8758ff;
+  background: #1e272e;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .App {
@@ -19,74 +21,107 @@ body {
 }
 
 h1 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
+  color: #00b894;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .TodoWrapper {
-  background: #1A1A40;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 5px;
+  background: #2d3436;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .TodoForm {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-input {
   outline: none;
-  background: none;
-  border: 1px solid #8758ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  color: #fff;
+  background: #1e272e;
+  border: 2px solid #00b894;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border-radius: 8px;
+  color: #f5f6fa;
+  transition: border 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #55efc4;
 }
 
 .todo-input::placeholder {
-  color: #ffffff4d;
+  color: #b2bec3;
 }
 
 .todo-btn {
-  background: #8758ff;
+  background: #00b894;
   color: #fff;
   border: none;
-  padding: 0.55rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-btn:hover {
+  background: #019875;
 }
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
+  background: #00b894;
   color: #fff;
-  padding: 0.75rem 1rem;
-  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease;
 }
 
-.fa-trash {
-  margin-left: 0.75rem;
+.Todo:hover {
+  transform: scale(1.02);
 }
 
-.incompleted {
-  color: #fff;
+.incompleted,
+.completed {
+  flex: 1;
   cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
 .completed {
-  color: #c5aeff;
+  color: #dfe6e9;
   text-decoration: line-through;
-  cursor: pointer;
+  opacity: 0.8;
 }
 
 .edit-icon,
 .delete-icon {
+  color: #fff;
+  margin-left: 0.75rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
- 
+
+.edit-icon:hover {
+  color: #ffeaa7;
+}
+
+.delete-icon:hover {
+  color: #ff7675;
+}
